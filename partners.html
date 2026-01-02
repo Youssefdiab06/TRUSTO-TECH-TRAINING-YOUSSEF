@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusto Tech | Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <nav class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="logo.jpeg" alt="Trusto Logo" class="admin-logo">
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+                <li><a href="message.html"><i class="fa-solid fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="partners.html"><i class="fa-solid fa-users"></i> <span>Partners</span></a></li>
+                <li><a href="services.html"><i class="fa-solid fa-file-code"></i> <span>Programs</span></a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> <span>Settings</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+            </div>
+        </nav>
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <h4>Global Partners & Offices</h4>
+                <button class="btn btn-primary-custom btn-sm">+ Add Partner</button>
+            </header>
+            <div class="p-4">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="office-card-wrapper">
+                            <h5>Lebanon Office</h5>
+                            <p class="text-gray">Primary Tech Hub</p>
+                            <hr class="border-secondary">
+                            <div class="d-flex justify-content-between">
+                                <span class="badge bg-success">Active</span>
+                                <a href="#" class="text-primary text-decoration-none">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+</body>
+</html>

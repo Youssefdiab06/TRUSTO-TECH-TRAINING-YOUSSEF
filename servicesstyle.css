@@ -1,0 +1,129 @@
+﻿/* --- CORE --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background: #010409;
+}
+
+/* --- STICKY HEADER --- */
+.nav-main {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 3px solid #00a2ff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 100px;
+}
+
+.nav-main .nav-link {
+    color: #020617 !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #00a2ff;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px 18px !important;
+    transition: 0.3s;
+}
+
+    .nav-main .nav-link:hover {
+        background: #00a2ff !important;
+        color: white !important;
+    }
+
+
+
+/* --- PAGE HERO --- */
+.page-hero {
+    margin-top: 75px;
+    padding: 120px 0;
+    background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), url('img1.jpg') center/cover;
+}
+
+/* --- SERVICE CARDS --- */
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    height: 100%;
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: #00a2ff;
+        background: rgba(0, 162, 255, 0.05);
+    }
+
+.icon-box {
+    font-size: 40px;
+    color: #00a2ff;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.service-card h5 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --- STATS COUNTER --- */
+.stats-section {
+    background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('img2.jpg') center/cover;
+    background-attachment: fixed;
+}
+
+.stat-card {
+    padding: 30px;
+}
+
+.stat-circle {
+    width: 130px;
+    height: 130px;
+    background: #f39c12; /* Theme Orange from image */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+}
+
+.counter {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.stat-label {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* --- FOOTER --- */
+.footer-dark {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

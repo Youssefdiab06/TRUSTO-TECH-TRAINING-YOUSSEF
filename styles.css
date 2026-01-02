@@ -1,0 +1,667 @@
+﻿/* --- 1. CORE CONFIG & VARIABLES --- */
+:root {
+    --primary-blue: #00a2ff;
+    --primary-hover: #0088d6;
+    --bg-main: #020617;
+    --bg-darker: #010409;
+    --text-gray: #94a3b8;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-main);
+    color: #e5e7eb;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* --- 2. GLOBAL UTILITIES & RESPONSIVENESS --- */
+.section {
+    padding: 100px 0;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background: var(--bg-darker);
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Scroll Reveal Initial State */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--transition);
+}
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@media (max-width: 768px) {
+    .section, .section-padding {
+        padding: 60px 0;
+    }
+}
+
+/* --- 3. NAVIGATION --- */
+.nav-main {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 3px solid var(--primary-blue);
+    padding: 10px 0;
+    z-index: 1050;
+}
+
+.navbar-brand img {
+    height: 120px;
+}
+
+.nav-main .nav-link {
+    color: #020617 !important;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px 18px !important;
+    transition: var(--transition);
+}
+
+    .nav-main .nav-link:hover, .partner-btn {
+        background: var(--primary-blue) !important;
+        color: white !important;
+    }
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .nav-main .nav-link {
+        border: none;
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
+    }
+}
+
+/* --- 4. HERO SECTION --- */
+.hero-slider {
+    margin-top: 85px;
+}
+
+.hero-slide {
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.7));
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    z-index: 5;
+}
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 800;
+        color: #fff;
+    }
+
+@media (max-width: 768px) {
+    .hero-slide {
+        height: 60vh;
+    }
+}
+
+/* --- 5. CARDS & BUTTONS --- */
+.service-card, .program-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    transition: var(--transition);
+}
+
+    .service-card:hover, .program-card:hover {
+        border-color: var(--primary-blue);
+        transform: translateY(-10px);
+        background: rgba(0, 162, 255, 0.05);
+    }
+
+.icon-box, .program-icon {
+    font-size: 35px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.btn-primary-custom {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+    .btn-primary-custom:hover {
+        background: var(--primary-hover);
+        box-shadow: 0 8px 20px rgba(0,162,255,0.3);
+    }
+
+/* --- 6. TICKER --- */
+.ticker-section {
+    background: var(--primary-blue);
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.ticker {
+    display: flex;
+    gap: 80px;
+    white-space: nowrap;
+    animation: tickerMove 30s linear infinite;
+}
+
+    .ticker span {
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+@keyframes tickerMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- 7. CONTACT & FORMS --- */
+.bg-section-dark {
+    background: var(--bg-darker);
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-label-custom {
+    color: var(--text-gray);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pro-form .form-control {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 12px;
+    color: white !important;
+    border-radius: 12px;
+}
+
+/* --- 8. OUR OFFICES (GLASSMORPHISM) --- */
+.flag-node {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+}
+
+.flag-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.flag-info {
+    padding: 25px;
+}
+
+    .flag-info h5 {
+        font-weight: 800;
+    }
+
+    .p {
+        color: blue;
+        margin-bottom: 0;
+    }
+
+/* --- 9. FOOTER --- */
+.footer-advanced {
+    /* Use your site's main background color */
+    background: var(--bg-main);
+    padding: 80px 0 30px;
+    border-top: 1px solid rgba(193, 155, 118, 0.2); /* Tinted with gold */
+}
+
+.footer-logo {
+    height: 45px;
+    filter: brightness(1.1); /* Ensures logo pops */
+}
+
+.footer-heading {
+    /* Changed to your branding gold to highlight the widgets */
+    color: dodgerblue;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+    /* Adds a small decorative line under the widget title */
+    .footer-heading::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: white;
+        margin-top: 8px;
+    }
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+    .footer-nav li {
+        margin-bottom: 12px;
+    }
+
+    .footer-nav a, .footer-nav p {
+        color: #a0a0a0; /* Sophisticated gray */
+        text-decoration: none;
+        transition: 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+        .footer-nav a:hover {
+            color: #c19b76; /* Hover color changed to gold */
+            padding-left: 8px;
+        }
+
+.social-links a {
+    color: dodgerblue; /* Social icons in gold */
+    font-size: 1.3rem;
+    margin-right: 20px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+    .social-links a:hover {
+        color: white;
+        transform: scale(1.2);
+    }
+
+.newsletter-box {
+    position: relative;
+    display: flex;
+    margin-top: 15px;
+}
+
+    .newsletter-box input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(193, 155, 118, 0.3); /* Gold-tinted border */
+        border-radius: 4px; /* Matches the CEO portrait border-radius */
+        padding: 12px 20px;
+        color: white;
+        outline: none;
+        font-size: 0.85rem;
+    }
+
+        .newsletter-box input:focus {
+            border-color: #c19b76;
+        }
+
+    .newsletter-box button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #c19b76; /* Use gold for the action button */
+        border: none;
+        color: white;
+        width: 46px;
+        height: 100%; /* Spans full height of input */
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .newsletter-box button:hover {
+            background: #a88562; /* Slightly darker gold on hover */
+        }
+
+.footer-bottom p {
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+/* Hide the real cursor on desktop */
+@media (min-width: 992px) {
+    body {
+        cursor: none;
+    }
+
+    .cursor-dot, .cursor-outline {
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 99999;
+        transition: transform 0.1s ease-out;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #00a2ff;
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgba(0, 162, 255, 0.5);
+        transition: all 0.15s ease-out;
+    }
+}
+.system-status-widget {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(1, 4, 9, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 999;
+}
+
+.pulse-ring {
+    width: 12px;
+    height: 12px;
+    background: #00ffcc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffcc;
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 255, 204, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 204, 0);
+    }
+}
+
+.status-label {
+    display: block;
+    font-size: 9px;
+    color: #94a3b8;
+    letter-spacing: 2px;
+}
+
+.status-value {
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+}
+.ceo-message-section {
+    /* Inherit background from the parent/body */
+    background-color: transparent;
+    padding: 80px 10%;
+    /* Inherits your website's global font */
+    font-family: inherit;
+}
+
+.ceo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.ceo-content-left {
+    flex: 1.2;
+    text-align: center;
+}
+
+.ceo-title {
+    color: dodgerblue;
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: capitalize;
+}
+.ceo-divider::after {
+    content: "❤";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff; /* Match your home page background color */
+    padding: 0 5px;
+    font-size: 12px;
+}
+.ceo-divider {
+    margin: 10px 0 30px;
+    color: #e0e0e0;
+    width:60px;
+    height:2px;
+    position:relative;
+}
+
+.ceo-name {
+    color: #00a2ff;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    transition:all 0.3s ease;
+    cursor:default;
+}
+
+.ceo-text {
+    color: #666; /* Adjust this to match your site's text color */
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.ceo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.ceo-icon-circle {
+    background-color: #c19b76;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.email-heading {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.ceo-email {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.ceo-content-right {
+    flex: 0.8;
+}
+
+.ceo-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    /* Soft edges like the screenshot */
+    border-radius: 2px;
+}
+.ceo-text-content:hover .ceo-name{
+    letter-spacing: 1px;
+    text-shadow:0px 0px 8px 
+    rgba(193,155,118,0.3);
+}
+
+/* Tablet & Mobile Layout */
+@media (max-width: 992px) {
+    .ceo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ceo-content-right {
+        order: -1; /* Image moves to top on mobile */
+    }
+}
+.our-team-section {
+    padding: 60px 20px;
+    background-color: transparent; /* Matches your current background */
+    font-family: inherit; /* Matches your homepage font */
+    text-align: center;
+}
+
+.team-header {
+    color: #c19b76; /* Trusto Tech gold color */
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 15px; /* Rounded card corners */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+    .team-card:hover {
+        transform: translateY(-10px); /* Subtle hover lift */
+    }
+
+.img-wrapper {
+    height: 350px;
+    overflow: hidden;
+}
+
+    .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures photos fill the area without stretching */
+    }
+
+.card-info {
+    padding: 20px;
+    border-top: 5px solid dodgerblue; /* The bottom gold border from image */
+}
+
+    .card-info h3 {
+        color: black;
+        margin: 10px 0 5px;
+        font-size: 1.25rem;
+    }
+
+.role {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.email {
+    color: dodgerblue; /* Trusto Tech blue link color */
+    text-decoration: none;
+    font-size: 0.85rem;
+    word-break: break-all;
+}
+
+    .email:hover {
+        text-decoration: underline;
+    }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

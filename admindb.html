@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusto Tech | Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="logo.jpeg" alt="Trusto Logo" class="admin-logo">
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+                <li><a href="message.html"><i class="fa-solid fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="partners.html"><i class="fa-solid fa-users"></i> <span>Partners</span></a></li>
+                <li><a href="services.html"><i class="fa-solid fa-file-code"></i> <span>Programs</span></a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> <span>Settings</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+            </div>
+        </nav>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <h4>Welcome back, Administrator</h4>
+                <div class="user-profile">
+                    <span class="d-none d-md-block">Admin User</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+
+            <div class="admin-content p-4">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="stat-card reveal active">
+                            <h6>Total Inquiries</h6>
+                            <h2>124</h2>
+                            <span class="trend up">+12% this week</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card reveal active">
+                            <h6>Active Partners</h6>
+                            <h2>32</h2>
+                            <span class="trend">Global Reach</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card reveal active">
+                            <h6>Live Systems</h6>
+                            <h2>18</h2>
+                            <span class="trend text-primary">Carrier Grade</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card reveal active">
+                            <h6>Security Alerts</h6>
+                            <h2>0</h2>
+                            <span class="trend text-success">All Systems Secure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card reveal active">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Recent Project Inquiries</h5>
+                        <button class="btn btn-sm btn-outline-primary rounded-pill">View All</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Service</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Telecom ERP</td>
+                                    <td><span class="badge bg-warning">Pending</span></td>
+                                    <td>Oct 24, 2023</td>
+                                    <td><button class="btn btn-sm btn-primary">Open</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Smith</td>
+                                    <td>iOS App Dev</td>
+                                    <td><span class="badge bg-success">Contacted</span></td>
+                                    <td>Oct 23, 2023</td>
+                                    <td><button class="btn btn-sm btn-primary">Open</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
