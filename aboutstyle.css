@@ -1,0 +1,143 @@
+﻿/* --- CORE STYLES --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background: #010409;
+}
+
+.text-primary {
+    color: #00a2ff !important;
+}
+
+/* --- NAVBAR (Same as Index) --- */
+.nav-main {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 3px solid #00a2ff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 100px;
+}
+
+.nav-main .nav-link {
+    color: #020617 !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #00a2ff;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px 18px !important;
+    transition: 0.3s;
+}
+
+    .nav-main .nav-link:hover {
+        background: #00a2ff !important;
+        color: white !important;
+    }
+
+
+/* --- PAGE HEADER --- */
+.about-header {
+    margin-top: 75px;
+    padding: 100px 0;
+    background: linear-gradient(rgba(0, 162, 255, 0.1), rgba(2, 6, 23, 1)), url('img2.jpg') center/cover;
+}
+
+    .about-header h1 {
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+
+/* --- SKILLS SECTION --- */
+.skill-wrapper {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.progress-bar-container {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00a2ff; /* Using the primary blue from your theme */
+    width: var(--width);
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
+}
+
+/* --- MISSION & VISION --- */
+.mv-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 45px;
+    border-radius: 25px;
+    height: 100%;
+    transition: 0.4s;
+}
+
+    .mv-card:hover {
+        transform: translateY(-10px);
+        border-color: #00a2ff;
+        background: rgba(0, 162, 255, 0.04);
+    }
+
+.mv-icon {
+    font-size: 45px;
+    color: #00a2ff;
+    margin-bottom: 20px;
+}
+
+.mv-card h3 {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.mv-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .mv-card {
+        text-align: center;
+    }
+}
